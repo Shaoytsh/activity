@@ -15,8 +15,18 @@
           >
         </p>
       </div>
+      <div class="other">
+        <span class="say-some">
+          {{ say }}
+        </span>
+        <img
+          class="qr"
+          src= "https://img-blog.csdnimg.cn/20210118131727774.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          alt="加微信入群"
+        />
+      </div>
       <div class="activities">
-        <div class="act" v-for="(item, index) in activited">
+        <div class="act" v-for="(item, index) in activited" :key="index">
           <h2 class="act-title">{{ index + 1 }}.{{ item.title }}</h2>
           <p v-if="item.time && item.time.length == 2">
             <span class="active-time"
@@ -41,16 +51,7 @@
           />
         </div>
       </div>
-      <div class="other">
-        <span class="say-some">
-          {{ say }}
-        </span>
-        <img
-          class="qr"
-          src= "../assets/mychat.jpg"
-          alt="加微信入群"
-        />
-      </div>
+      
     </div>
   </div>
 </template>
@@ -259,8 +260,12 @@ export default {
         },
       ],
       say:
-        "最新出的礼包，活动请加下面VX进群，持续更新，完全免费。更有全网最低CDK，每天可购买一次：400积分+潜能果*2+洗练丹*5+润魂石*2+根骨丹*4",
+        "最新出的礼包，活动请加下面VX进群，持续更新，完全免费。"
+        +"\n更有全网最低CDK，每天可购买一次：400积分+潜能果*2+洗练丹*5+润魂石*2+根骨丹*4",
     };
+  },
+  mounted () {
+ 
   },
   computed: {
     activited() {
@@ -275,6 +280,9 @@ export default {
       });
     },
   },
+  methods: {
+   
+  }
 };
 </script>
 
@@ -344,7 +352,9 @@ export default {
 }
 
 .say-some {
+    color: red;
   margin: 20px 0;
+  font-size: 16px;
 }
 
 .bg {

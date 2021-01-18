@@ -3,13 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { WechatPlugin } from 'vux'
-Vue.use(WechatPlugin)
-console.log(Vue.wechat) // 可以直接访问 wx 对象。
-Vue.config.productionTip = false
-import {wechatUtil} from '@/util'
-wechatUtil.setWechatConfig(window.location.href.split('#')[0])
+// import wx from 'weixin-js-sdk'
 /* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,
