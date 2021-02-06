@@ -19,11 +19,14 @@
         <span class="say-some">
           {{ say }}
         </span>
-        <img
+        <img v-image-preview
           class="qr"
-          src= "https://img-blog.csdnimg.cn/20210118131727774.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          src= "https://img-blog.csdnimg.cn/20210206132158531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
           alt="加微信入群"
         />
+        <span class="say-some">
+          {{ sayRemark }}
+        </span>
       </div>
       <div class="activities">
         <div class="act" v-for="(item, index) in activited" :key="index">
@@ -40,18 +43,42 @@
             <a target="_blank" :href="item.href">进入领取</a>
           </p>
           <div v-if="item.icon" class="icon-wrapper">
-            <img class="icon" :src="item.icon" v-if="item.icon" alt="" />
+            <img v-image-preview class="icon" :src="item.icon" v-if="item.icon" alt="" />
             <span class="icon-desc">长按扫码领取</span>
           </div>
-          <img
-            v-if="item.desc_img"
-            class="item-desc-img"
-            :src="item.desc_img"
-            alt=""
-          />
+          
+          <p class="go-get" v-if="item.remark">
+            <span class="act-desc">{{ item.remark }}</span>
+          </p>
+          <div v-if="item.desc_img"  class="desc_img">
+             <div >
+            <img v-image-preview class="item-desc-img" :src="item.desc_img[0]" alt="" />
+            </div>
+              <div >
+            <img v-image-preview class="item-desc-img" :src="item.desc_img[1]" alt="" />
+              </div>
+              <div >
+            <img v-image-preview class="item-desc-img" :src="item.desc_img[2]"  alt="" />
+              </div>
+          </div>
         </div>
       </div>
-      
+      <div class="other">
+        <span class="say-some">
+          {{ say }}
+        </span>
+        <img v-image-preview
+          class="qr"
+          src= "https://img-blog.csdnimg.cn/20210206132158531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          alt="加微信入群"
+        />
+        <span class="say-some">
+          {{ sayRemark }}
+        </span>
+      </div>
+      <br/>
+      <br/>
+      <br/>
     </div>
   </div>
 </template>
@@ -63,205 +90,206 @@ export default {
     return {
       activities: [
         {
-          title: "天龙三年 有你有侠气",
-          description: "每日签到领微信游戏专属豪华福利",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/05/28/n9r4GET471543424-.png",
-          time: ["2020-05-28", "2020-06-17"],
+          title: "每日登陆签到领积分",
+          description: "一月签到1000积分，每日登陆即可签到领取,老区可领！",
+           icon:
+            "https://img-blog.csdnimg.cn/20210206133825646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+          href: "",
         },
         {
-          title: "520 QQ音乐助你说出爱",
-          description: "iPad、迪奥口红、VIP、游戏礼包重磅集结，快来领取吧!",
+          title: "冬日暖心欧皇",
+          description: "奖励包含麒麟元神等",
+          icon:
+            "https://img-blog.csdnimg.cn/20210206133929452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+        },
+        
+        {
+          title: "腾讯视频荣耀玩家活动",
+          description: "进入后往下滑动,成为对应等级的荣耀玩家即可领取奖励,也可以组队好友获取荣耀积分！",
           href:
-            "https://y.qq.com/jzt/hdzxdaily/520zchd.html?ADTAG=hdzx19_share&channelId=10053291&openinqqmusic=1",
+            "https://magic.iwan.qq.com/magic-act/110141/index.html?ovscroll=0&page=index&id=110141&actpayid=10002369&actadid=10002369110141&isGameZone=1&ADTAG2=txsp.grzx-2.jdyx-1&reportParams=iwan_personal_rpk&page_tag=hotgames&refer_page=hotgames&isDarkMode=0&uiType=REGULAR&url_from=share&second_share=0&share_from=wxf",
         },
         {
-          title: "天龙三载 侠气同行",
-          description: "全新版本震撼来袭，福利限时发放中",
+          title: "江湖周游记活动",
+          description: "进入链接后往下滑动一下，登录游戏后当周的周日23:59前领取一次",
+          href: "https://tlbb.qq.com/act/3732/a20200909tlbb/runOff.html",
+        },
+        {
+          title: "天龙八部手游圈打卡",
+          description: "每日都可以领取积分、洗练丹等，还包含累计打卡奖励。进入链接后，点击右边“打卡”两个小字领取",
+          icon: "https://img-blog.csdnimg.cn/20210206134007278.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+        },
+        {
+          title: "周六福利日活动",
+          description: "周六领取每周刷新"+"\n包含三级宝石*1+天灵丹*10+200积分",
+          icon:
+            "https://img-blog.csdnimg.cn/20210206134025955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+        },
+        {
+          title: "爱玩荣耀用户签到活动",
+          description:"每日领取荣耀用户"+
+            "\n每日领取,需要是爱玩荣耀用户,具体规则看礼包介绍",
           href:
-            "https://y.qq.com/apg/tlbb/zhounianindex.html?ADTAG=hdzxgamebanner&from=singlemessage",
+            "https://iwan.qq.com/m/login/login-qt.htm?ru=https%3A%2F%2Fiwan.qq.com%2Fhonour%2Fgrowsign%3FreportParams%3Diwan_activity_rpk%26page_tag%3Dgrowacts%26refer_page%3Dgrowacts%26isDarkMode%3D0%26uiType%3DREGULAR%26ADTAG%3Dtxsp.qdyy.ymfx%26url_from%3Dshare%26second_share%3D0%26share_from%3Dwxf&ADTAG2=txsp.qdyy.ymfx&reportParams=iwan_activity_rpk&page_tag=growacts&refer_page=growsign",
         },
         {
-          title: "三载天龙 侠气同行",
-          description: "少侠！请查收你的绝密江湖档案",
-          href: "https://tlbb.qq.com/act/2855/a20200429sghg/index.html",
+          title: "每日签到活动",
+          description: "每日领取,新手礼包,签到礼包",
+          href:"https://tlbb.qq.com/act/2923/a20200521xiaom/index.html",
         },
         {
-          title: "天龙八部周年庆福利集结",
-          description: "心悦悦享卡加码福利限时领取",
-          time: ["2020-05-18", "2020-06-19"],
-          href: "http://xinyue.qq.com/act/a20200507tlznxblx/share.html",
+          title: "爱玩链接活动",
+          description: "包含每日、每周、新手、半周年庆等多个活动",
+          href:"https://iwan.qq.com/auto/act.htm?id=1766&from=singlemessage&isappinstalled=0&isShare=true"
         },
         {
-          title: "天龙三载 侠气同行",
-          description: "天龙幸运星不是每一个玩家都能领，领不了的就不领",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/05/16/n8sKPaA943357978-.png",
-          time: ["2020-05-15", "2020-05-26"],
-        },
-        {
-          title: "快领！天龙八部三周年庆礼包",
-          description:
-            "天龙八部三周年庆，全新版本震撼来袭！更有海量礼包，领到手软！",
-          time: ["2020-05-16", "2020-06-18"],
-          href:
-            "https://act.iwan.qq.com/activitynew/0UtipS-nw.html?id=0UtipS-nw&actpayid=20000005&actadid=200000050UtipS-nw&key=6433kVnwtVsKqSEL7CUkfIkXXsi%25252BW1EpiJe5ya5XExtOsq8rxfUiRrMEwA2uoDRrWhQ0HqHBg0Json2PlpNPb69J7aueEJXF3YYBbm6Wh8XPzSQI9PJdbHwGcmk4%25252FG52irZtt8QGxqS4EmGJbk%25252BqX2%25252FZhhyOQQjDh8ERuWqGiJKUOCpF4WEoXjr5sbj9bG76mXk0rtrjj8LW3Q3WioP5vRb3vUH16gLmCgfFqUdAj13CP9%25252FCbsQxBXO7r0MoDbRzMhA&url_from=share&second_share=0&share_from=wxf",
-        },
-        {
-          title: "天龙3周年庆",
-          description: "注册抢微信游戏188元现金",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/05/15/n8nBpB6253103388-.png",
-          time: ["2020-05-14", "2020-05-24"],
-        },
-        {
-          title: "天龙3周年 龙腾盛世开幕",
-          description: "每日签到领周年庆专属豪礼",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/05/15/n8nC8-U969070230-.png",
-          time: ["2020-05-01", "2020-06-01"],
-        },
-        {
-          title: "每日签到",
-          description: "每日均可签到一次",
+          title: "公众号每日签到活动",
+          description: "每日领取,每日记得签到",
           href:
             "https://gzhcos.qq.com/awp-activity/common/?ADTAG=tlbb.198#/?id=198&game=tlbb",
         },
         {
-          title: "天龙八部福利中心",
+          title: "微信公众号活动",
           description:
-            "包含每日登陆、每周登陆、每日签到、等级礼包、战力礼包、注册礼包、新手礼包、订阅礼包等",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/05/13/n8d6ep3969401524-.png",
-        },
-        {
-          title: "三周年庆典（微信）",
-          description: "天龙八部手游官方网站",
-          time: ["2020-05-11", "2020-05-31"],
+            "每日领取"+"\n每日都可以领的天龙八部手游公众号礼包",
           href:
-            "https://tlbb.qq.com/act/2793/a20200422znqm/index_yy.html?fromopenid=oVgCowCCK4YnTwYt8ygZSTpmpeCg&sign=FF1EF23257921024FD2667C1C91943F9&from=groupmessage",
+            "https://game.weixin.qq.com/cgi-bin/h5/static/giftcenter_v2/game_gift.html?appid=wx44b60f3ea0534cd7#wechat_redirect",
         },
         {
-          title: "谷雨入江湖 品茶会侠客（微信）",
-          description: "入江湖赢微信游戏专属现金",
-          time: ["2020-04-18", "2020-05-06"],
+          title: "爱玩公众号活动",
+          description: "每日礼包每周礼包新人礼包"+"\n每日礼包、每周礼包、会员礼包、新人礼包、特权礼包",
+          href:"https://iwan.qq.com/gamewx/giftcenter",
+        },
+        {
+          title: "腾讯视频爱玩活动",
+          description: "新人礼包每日礼包每周礼包"+"\n新人活动、每周活动、特权活动、每日活动",
+          href: "https://iwan.qq.com/community/giftcenter?gameid=24161&ADTAG=txsp.qdyy.ymfx&ptag=4_7.2.5.22206_wxf&from=singlemessage",
+        },
+        {
+          title: "wegame活动",
+          description: "每日礼包每周礼包新手礼包"+"\n该礼包必须下载掌上WeGameAPP，包含每日、每周、新手、暑假等级等活动礼包",
+          href:"https://m.wegame.qq.com/app/pointstore/community/index.html?share_tgp_id=2032829497&from_type=giftlist&game_id=0&gameid=609&from=timeline&isappinstalled=0",
+        },
+        {
+          title: "新手福袋4",
+          description: "新微信可领仅限一次"+"\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
+          icon: "https://img-blog.csdnimg.cn/20210206134119880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+        },
+        {
+          title: "新手福袋3",
+          description: "新微信可领仅限一次"+"\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
           icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/04/23/n6BgtgY657456055-.png",
+            "https://img-blog.csdnimg.cn/20210206134135640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
         },
         {
-          title: "每日登录赢专属福利（微信）",
-          description: "天龙八部邀你品新茶，赠你登录好礼",
+          title: "新手福袋2",
+          description: "新微信可领仅限一次"+"\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
           icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/04/23/n6Bh6v9736067268-.png",
-          time: ["2020-04-18", "2020-05-10"],
+            "https://img-blog.csdnimg.cn/20210206134155747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
         },
         {
-          title: "爱玩游戏礼包（微信）",
-          description: "免费精品游戏礼包天天领",
-          href: "https://iwan.qq.com/gamewx/giftcenter",
+          title: "新手福袋1",
+          description: "新微信可领仅限一次"+"\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
+          icon:
+            "https://img-blog.csdnimg.cn/20210206134211469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
         },
         {
-          title: "福利中心-礼包列表（微信）",
+          title: "腾讯新闻APP",
+          description: "每日礼包"+"\n每日签到礼包，需跳转腾讯新闻进行领取",
+          href:
+            "https://n.ssp.qq.com/giftDetail?game_id=4663&pageType=gameHallGiftList&ishare=1&adShareFrom=wx&devid=20762a461bfb0274&qimei=a000007edde616&uid=100187431131&shareto=wx&from=singlemessage",
+        },
+        {
+          title: "应用宝APP活动",
+            description: "付费礼包"+"\n苹果用户不能领取,安卓用户需要30元开通!",
+          href:
+            "https://qzs.qq.com/open/mobile/mid-jump/index.html?dest=tmast%3A%2F%2Fwebview%3Fmode%3D0%26url%3Dhttps%253A%252F%252Fqzs.qq.com%252Fopen%252Fbaymax%252F11%252F12086_f17d9a62186ddb3dfe227c82b97ed031_0.html%253Ffrom%253Dgroupmessage%2526g_f%253D5758%2526srctype%253D62%2526ticket%253D&text=%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8%E9%9C%B8%E6%9C%8D%E6%9C%88%E5%8D%A1",
+        },
+        {
+          title: "心悦俱乐部APP活动",
+          description: "G分兑换每日礼包每周礼包每日抽奖"
+          +"\r\n包含G分兑换、见面礼包、每周礼包、每月礼包、每日抽奖，需在心悦俱乐部APP中领取",
+          href:"https://xinyue.qq.com/appshare/share.shtml?gid=1241&xylevel=4&ADTAG=tgi.wx.share.message",
+        },
+        {
+          title: "掌上道聚城APP活动",
+          description: "注册礼包每日签到等级礼包" 
+          +"\n需下载掌上道具城，包含注册礼包、每日签到、等级礼包"
+          +"\niPhone用户请在APP Store中下载",
+            remark:"操作步骤："
+          +"\n1、下载掌上道聚城APP"
+          +"\n2、进入APP，选择首页->游戏礼包"
+             +"\n3、点击导航栏手游，一直往下滑，直到找到（天龙八部手游），排名靠后，多滑一会儿"
+          +"\n4、领取礼包"
+          +"\n图片详情：",
+          desc_img: ["https://img-blog.csdnimg.cn/20210206134356985.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,"https://img-blog.csdnimg.cn/20210206134411559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,"https://img-blog.csdnimg.cn/20210206134425592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"],
+        },
+        {
+          title: "闪现一下APP活动",
+          description: "积分兑换" 
+          +"\n登录即会赠送积分，使用积分可兑换礼包" 
+          +"\niPhone用户请到App Store中下载",
+          remark:"操作步骤："
+          +"\n1、下载闪现一下APP，并进入"
+          +"\n2、选择天龙八部手游"
+             +"\n3、点击礼包"
+          +"\n4、兑换、领取礼包"
+          +"\n图片详情：",
+           desc_img: ["https://img-blog.csdnimg.cn/20210206134457420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,"https://img-blog.csdnimg.cn/20210206134508486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,"https://img-blog.csdnimg.cn/20210206134526269.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"],
+        
+        },
+        {
+          title: "腾讯爱玩APP活动",
+          description: "仅限安卓每日礼包每周礼包新人礼包" 
+          +"\n需下载腾讯爱玩APP领取，包含每日、每周、新人、特权礼包" 
+          +"\n仅限安卓用户",
+          remark:"操作步骤："
+          +"\n1、下载APP"
+          +"\n2、点击导航栏礼包"
+             +"\n3、选择底部“天龙八部”"
+          +"\n操作如图所示：",
+           desc_img: ["https://img-blog.csdnimg.cn/20210206134547928.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,"https://img-blog.csdnimg.cn/20210206134600386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,""],
+        },
+        {
+          title: "QQ音乐活动",
           description:
-            "包括每日礼包、每周礼包、新手礼包、分享礼包等十几个礼包可领取！",
-          href:
-            "https://m.wegame.qq.com/app/pointstore/community/index.html?share_tgp_id=2032829497&from_type=giftlist&game_id=0&gameid=609&from=timeline&isappinstalled=0",
-        },
-        {
-          title: "快领天龙八部x龙岭迷窟联动礼包!（QQ+微信）",
-          description: "天龙八部x龙岭迷窟联动送大礼！开通VIP即可获得大量积分！",
-          href:
-            "https://act.iwan.qq.com/activitynew/wfvybssc_.html?id=wfvybssc_&actpayid=20000005&actadid=20000005wfvybssc_&key=5aben5oCXBIhDdSZ4ErTQ%25252BEt2uzSTL0e23Am8qrGnw9yeJf151Bbdquh1ynFv3sW%25252F4DH4taWXpPZGMzuQLvXys8iDk3d1xeELZOa%25252BvRE7YmHfmrin4PezJwkWTigrQKBHjocDJk7rAD%25252BeiKNe6yRIYNt6RCeFJAJR4lVVmKJYccf8458JIBbr4kMFvvEHTXdT%25252BbcffwdN2MHzYSgbaPxdBvktsZ4S7Z%25252ByzLD4XbZNIG2Xcs4CgfcVatiwY2iFxbmFH6srP2exEs",
-        },
-        {
-          title: "天龙八部钻石礼包（微信）",
-          description:
-            "腾讯视频积分兑换，70积分兑换150积分、龙元晶珀、灵动海豚！",
-          href:
-            "https://film.qq.com/x/credit_mall/route/productDetail?productId=60000220&ptag=4_7.7.9.23025_wxf&from=singlemessage",
-        },
-        {
-          title: "游戏礼包（微信）",
-          description: "超多款游戏免费礼包等你领！",
-          href:
-            "https://iwan.qq.com/community/giftcenter?gameid=24161&ADTAG=txsp.qdyy.ymfx&ptag=4_7.2.5.22206_wxf&from=singlemessage",
-        },
-        {
-          title: "天龙八部手游爱玩游戏福利大放送（微信）",
-          description: "来爱玩游戏中心领取天龙八部手游游戏礼包吧！",
-          href:
-            "https://iwan.qq.com/auto/act.htm?id=1766&from=singlemessage&isappinstalled=0&isShare=true",
-        },
-        {
-          title: "QQ音乐礼包（微信）",
-          description: "QQ音乐礼包网页版",
+            "注册礼包每日礼包每周礼包 注册礼包、每周签到、每日登录、绿钻专属、绿钻周礼包、绿钻日礼包",
           href:
             "https://y.qq.com/m/acclevel/lb_info.html?encrypt_uin=NeSA7eoPNeSF&gId=6&from=singlemessage",
         },
         {
-          title: "微信游戏任务大礼包（微信）",
-          description: "每天做任务，幸运多一点！轻轻一点，礼包到手",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/04/15/n5VZHL7345824878-.png",
-        },
-        {
-          title: "策马江湖，抢限量现金红包（微信）",
-          description: "来天龙邂逅红颜，限量红包、珍惜道具派送中！",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/04/17/n67P-Vy802143791-.png",
-          time: ["2020-04-09", "2020-04-21"],
-        },
-        {
-          title: "侠之大者 尽在天龙（微信）",
-          description: "新人加入江湖赢限量礼包",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/04/30/n7bfvWg577593819-.png",
-          time: ["2020-04-30", "2020-05-15"],
-        },
-        {
-          title: "微信游戏商城小程序",
-          description:
-            "微信中搜索“微信游戏商城”小程序，选择“天龙八部手游”，即可参与抽奖",
-          desc_img:
-            "http://image.xingqingshe.com/image/www/0/750/2020/05/13/n8d8Nao810368176-.jpg",
-        },
-        {
-          title: "新版江湖 即将开幕（微信）",
-          description: "每日登录赢微信游戏专属福利",
-          icon:
-            "http://image.xingqingshe.com/image/www/0/750/2020/04/30/n7bg-N2470185811-.png",
-          time: ["2020-04-30", "2020-05-15"],
-        },
-        {
-          title: "天龙送好礼（QQ专属）",
-          description:
-            "十年经典金庸正版授权手游，最热直播，天龙送好礼。QQ区专属礼包!",
+          title: "腾讯视频积分兑换活动",
+          description: "每周兑换积分兑换"
+          +"\n每周可兑换一次,需要有腾讯视频的积分才能兑换，包含50积分、龙元晶珀 * 1、灵动海豚(30天) * 1",
           href:
-            "https://youxi.vip.qq.com/m/act/cfbaa93665_tlbb_340148.html?_wv=1&_wwv=4&ADTAG=gameobj.msg_send_default.gamecenter&autodownload=1&from=singlemessage&plg_auth=1&plg_auth=1&ADTAG=adtag.pc&pcQrCode=1",
+            "https://film.qq.com/x/credit_mall/route/productDetail?productId=60000220&ptag=usercenter&url_from=share&second_share=0&share_from=wxf&from=singlemessage",
         },
         {
-          title: "天龙三周年盛典即将开幕（QQ专属）",
-          description: "连续签到领鼠年坐骑福鼠呈祥、龙元晶珀等好礼！",
-          href:
-            "https://youxi.vip.qq.com/m/act/84580aa69d_tlbb_475672.html?_wv=1&pvsrc=310&ADTAG=adtag.share.zujian&from=singlemessage&plg_auth=1",
-        },
-        {
-          title: "天龙三周年，有你有侠气!（QQ专属）",
-          description: "注册即领鼠年坐骑，限时冲级抽5-288Q币！",
-          href:
-            "https://youxi.vip.qq.com/m/act/c49919e235_tlbb_477609.html?_wv=1&pvsrc=310&ADTAG=adtag.share.zujian&from=singlemessage&plg_auth=1",
-        },
-        {
-          title: "各大APP礼包领取（QQ+微信）",
+          title: "腾讯游戏管家APP",
           description:
-            "包括腾讯新闻、QQ同步助手、心悦俱乐部、腾讯爱玩、QQ音乐、掌上道聚城、腾讯视频、腾讯游戏管家、掌上WeGame，各大APP每日均可领取礼包！",
-          desc_img:
-            "http://image.xingqingshe.com/image/www/0/750/2020/05/07/n7KQQvY793481676-.jpg",
+            "每日签到"
+          +"\n需下载腾讯游戏管家APP，包含洗练丹绑元、藏宝图等"
+          +"\niPhone用户请到App Store中下载",
+          remark:"操作步骤："
+          +"\n1、下载腾讯游戏管家APP"
+          +"\n2、进入APP，选择游戏中心"
+          +"\n3、搜索天龙八部并选择"
+          +"\n4、点击礼包进入领取"
+          +"\n图片提示：",
+             desc_img: ["https://img-blog.csdnimg.cn/20210206134625891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,"https://img-blog.csdnimg.cn/20210206134638588.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+          ,"https://img-blog.csdnimg.cn/20210206134649647.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"],
         },
       ],
       say:
-        "最新出的礼包，活动请加下面VX进群，持续更新，完全免费。"
-        +"\n更有全网最低CDK，每天可购买一次：400积分+潜能果*2+洗练丹*5+润魂石*2+根骨丹*4",
+        "加我VX持续更新最新礼包，拉你进礼包分享群",
+      sayRemark: "如果长按无法识别，请长按保存图片打开微信扫一扫，并且选择该图片",
     };
   },
   mounted () {
@@ -305,6 +333,7 @@ export default {
 
 .act {
   margin: 30px 0;
+  display: block;
 }
 
 .act-desc {
@@ -335,9 +364,9 @@ export default {
 
 .act .item-desc-img {
   max-width: 200px;
-  max-height: 200px;
+  max-height: 13rem;
   display: block;
-  margin: 0 auto;
+  margin: 10 auto;
 }
 
 .other {
@@ -385,5 +414,10 @@ h2 {
 }
 .bg-box {
   position: relative !important;
+}
+.act .desc_img{
+  display: flex;
+  text-align:center;
+
 }
 </style>
