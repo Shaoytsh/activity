@@ -701,6 +701,13 @@ export default {
   },
   mounted() {},
   computed: {
+    keepAlive() {
+    if (!this.$route.meta.isBack) { //true执行
+    // 如果isBack是false，表明需要获取新数据，否则就不再请求，直接使用缓存的数据
+    }
+    // 恢复成默认的false，避免isBack一直是true，导致下次无法获取数据
+    this.$route.meta.isBack = false;
+    },
     activited() {
       return this.activities.filter((act) => {
         if (
@@ -823,7 +830,7 @@ export default {
 }
 
 .bg-1 {
-  background-image: url(http://image.xingqingshe.com/image/www/0/750/2020/04/14/n5SONI6240068806-.jpg);
+  background-image: url(https://img-blog.csdnimg.cn/20210206214926164.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70);
   height: 360px;
   width: 100%;
   background-repeat: no-repeat;

@@ -8,7 +8,6 @@ import router from './router'
 import VueDirectiveImagePreviewer from 'vue-directive-image-previewer'
 import 'vue-directive-image-previewer/dist/assets/style.css'
 Vue.use(VueDirectiveImagePreviewer) 
-
 new Vue({
   el: '#app',
   router,
