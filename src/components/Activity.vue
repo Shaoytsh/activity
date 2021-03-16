@@ -457,31 +457,30 @@ export default {
     return {
       activities: [
         {
-          title: "每日登陆签到领积分",
-          description: "一月签到1000积分，每日登陆即可签到领取,老区可领！",
+          title: "三月签到1000积分",
+          description: "三月签到1000积分",
           icon:
-            "https://img-blog.csdnimg.cn/20210206133825646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+            "https://img-blog.csdnimg.cn/20210316122144157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
           href: "",
         },
         {
-          title: "冬日暖心欧皇",
-          description: "奖励包含麒麟元神等",
+          title: "天龙鉴定礼包",
+          description: "天龙鉴定礼包",
           icon:
-            "https://img-blog.csdnimg.cn/20210206133929452.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+            "https://img-blog.csdnimg.cn/20210316122159651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
         },
 
         {
-          title: "腾讯视频荣耀玩家活动",
+          title: "腾讯视频新用户下载活动",
           description:
-            "进入后往下滑动,成为对应等级的荣耀玩家即可领取奖励,也可以组队好友获取荣耀积分！",
+            "腾讯视频新用户下载活动",
           href:
-            "https://magic.iwan.qq.com/magic-act/110141/index.html?ovscroll=0&page=index&id=110141&actpayid=10002369&actadid=10002369110141&isGameZone=1&ADTAG2=txsp.grzx-2.jdyx-1&reportParams=iwan_personal_rpk&page_tag=hotgames&refer_page=hotgames&isDarkMode=0&uiType=REGULAR&url_from=share&second_share=0&share_from=wxf",
+            "https://magic.iwan.qq.com/magic-act/i7sxg3d0lwuzokg1224jhjr69g/index.html?ovscroll=0&page=index&actpayid=10002369&iOSUseWKWebView=1&reportParams=iwan_game-exclusive_rpk&isDarkMode=0&uiType=REGULAR&url_from=share&second_share=0&share_from=wxf",
         },
         {
-          title: "江湖周游记活动",
-          description:
-            "进入链接后往下滑动一下，登录游戏后当周的周日23:59前领取一次",
-          href: "https://tlbb.qq.com/act/3732/a20200909tlbb/runOff.html",
+          title: "心悦APP新人战力等级礼包",
+          description: "心悦APP新人战力等级礼包",
+          href: "https://xinyue.qq.com/act/a20210128xyzf/share.html",
         },
         {
           title: "天龙八部手游圈打卡",
