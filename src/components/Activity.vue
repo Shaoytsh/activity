@@ -325,7 +325,7 @@
           </section>
         </section>
       </section>
-      
+
       <!-- <div class="description">
         <span
           >本活动大全收集了天龙八部最新活动领取方式！部分活动需要通过长按扫码的方式进入，每天都可领取，赶快点击右上角，收藏起来~</span
@@ -457,11 +457,11 @@ export default {
     return {
       activities: [
         {
-          title: "三月签到1000积分",
-          description: "三月签到1000积分",
+          title: "五月签到 ",
+          description: "五月签到 ",
           icon:
-            "https://img-blog.csdnimg.cn/20210316122144157.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
-          href: "",
+            "",
+          href: "https://game.weixin.qq.com/cgi-bin/actnew/newportalact/148236/jpvaDJ3eECD7otbMA_WsgA/main_page?act_id=148236&k=jpvaDJ3eECD7otbMA_WsgA&pid=main_page&noticeid=96244134&key=&uin=&abtest_cookie=AAACAA%3D%3D",
         },
         {
           title: "天龙鉴定礼包",
@@ -471,11 +471,10 @@ export default {
         },
 
         {
-          title: "腾讯视频新用户下载活动",
-          description:
-            "腾讯视频新用户下载活动",
+          title: "天龙4周年 庆典召集令",
+          description: "天龙4周年 庆典召集令",
           href:
-            "https://magic.iwan.qq.com/magic-act/i7sxg3d0lwuzokg1224jhjr69g/index.html?ovscroll=0&page=index&actpayid=10002369&iOSUseWKWebView=1&reportParams=iwan_game-exclusive_rpk&isDarkMode=0&uiType=REGULAR&url_from=share&second_share=0&share_from=wxf",
+            "https://tlbb.qq.com/act/5607/a20210426qsm/index.html?ADTAG=tgi.wx.share.message",
         },
         {
           title: "心悦APP新人战力等级礼包",
@@ -701,11 +700,12 @@ export default {
   mounted() {},
   computed: {
     keepAlive() {
-    if (!this.$route.meta.isBack) { //true执行
-    // 如果isBack是false，表明需要获取新数据，否则就不再请求，直接使用缓存的数据
-    }
-    // 恢复成默认的false，避免isBack一直是true，导致下次无法获取数据
-    this.$route.meta.isBack = false;
+      if (!this.$route.meta.isBack) {
+        //true执行
+        // 如果isBack是false，表明需要获取新数据，否则就不再请求，直接使用缓存的数据
+      }
+      // 恢复成默认的false，避免isBack一直是true，导致下次无法获取数据
+      this.$route.meta.isBack = false;
     },
     activited() {
       return this.activities.filter((act) => {
