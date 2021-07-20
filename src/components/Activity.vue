@@ -349,7 +349,7 @@
           <img
             v-image-preview
             class="qr"
-            src="https://img-blog.csdnimg.cn/20210206132158531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+            src="https://img-blog.csdnimg.cn/20210720124928564.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
             alt="加微信入群"
           />
           <section>
@@ -435,7 +435,7 @@
           <img
             v-image-preview
             class="qr"
-            src="https://img-blog.csdnimg.cn/20210206132158531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
+            src="https://img-blog.csdnimg.cn/20210720124928564.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70"
             alt="加微信入群"
           />
           <section>
@@ -456,26 +456,26 @@ export default {
   data() {
     return {
       activities: [
-        {
-          title: "五月签到 ",
-          description: "五月签到 ",
-          icon:
-            "",
-          href: "https://game.weixin.qq.com/cgi-bin/actnew/newportalact/148236/jpvaDJ3eECD7otbMA_WsgA/main_page?act_id=148236&k=jpvaDJ3eECD7otbMA_WsgA&pid=main_page&noticeid=96244134&key=&uin=&abtest_cookie=AAACAA%3D%3D",
-        },
-        {
-          title: "天龙鉴定礼包",
-          description: "天龙鉴定礼包",
-          icon:
-            "https://img-blog.csdnimg.cn/20210316122159651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
-        },
+        // {
+        //   title: "五月签到 ",
+        //   description: "五月签到 ",
+        //   icon:
+        //     "",
+        //   href: "https://game.weixin.qq.com/cgi-bin/actnew/newportalact/148236/jpvaDJ3eECD7otbMA_WsgA/main_page?act_id=148236&k=jpvaDJ3eECD7otbMA_WsgA&pid=main_page&noticeid=96244134&key=&uin=&abtest_cookie=AAACAA%3D%3D",
+        // },
+        // {
+        //   title: "天龙鉴定礼包",
+        //   description: "天龙鉴定礼包",
+        //   icon:
+        //     "https://img-blog.csdnimg.cn/20210316122159651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+        // },
 
-        {
-          title: "天龙4周年 庆典召集令",
-          description: "天龙4周年 庆典召集令",
-          href:
-            "https://tlbb.qq.com/act/5607/a20210426qsm/index.html?ADTAG=tgi.wx.share.message",
-        },
+        // {
+        //   title: "天龙4周年 庆典召集令",
+        //   description: "天龙4周年 庆典召集令",
+        //   href:
+        //     "https://tlbb.qq.com/act/5607/a20210426qsm/index.html?ADTAG=tgi.wx.share.message",
+        // },
         {
           title: "心悦APP新人战力等级礼包",
           description: "心悦APP新人战力等级礼包",
@@ -503,17 +503,17 @@ export default {
           href:
             "https://iwan.qq.com/m/login/login-qt.htm?ru=https%3A%2F%2Fiwan.qq.com%2Fhonour%2Fgrowsign%3FreportParams%3Diwan_activity_rpk%26page_tag%3Dgrowacts%26refer_page%3Dgrowacts%26isDarkMode%3D0%26uiType%3DREGULAR%26ADTAG%3Dtxsp.qdyy.ymfx%26url_from%3Dshare%26second_share%3D0%26share_from%3Dwxf&ADTAG2=txsp.qdyy.ymfx&reportParams=iwan_activity_rpk&page_tag=growacts&refer_page=growsign",
         },
-        {
-          title: "每日签到活动",
-          description: "每日领取,新手礼包,签到礼包",
-          href: "https://tlbb.qq.com/act/2923/a20200521xiaom/index.html",
-        },
-        {
-          title: "爱玩链接活动",
-          description: "包含每日、每周、新手、半周年庆等多个活动",
-          href:
-            "https://iwan.qq.com/auto/act.htm?id=1766&from=singlemessage&isappinstalled=0&isShare=true",
-        },
+        // {
+        //   title: "每日签到活动",
+        //   description: "每日领取,新手礼包,签到礼包",
+        //   href: "https://tlbb.qq.com/act/2923/a20200521xiaom/index.html",
+        // },
+        // {
+        //   title: "爱玩链接活动",
+        //   description: "包含每日、每周、新手、半周年庆等多个活动",
+        //   href:
+        //     "https://iwan.qq.com/auto/act.htm?id=1766&from=singlemessage&isappinstalled=0&isShare=true",
+        // },
         {
           title: "公众号每日签到活动",
           description: "每日领取,每日记得签到",
