@@ -456,30 +456,10 @@ export default {
   data() {
     return {
       activities: [
-        // {
-        //   title: "五月签到 ",
-        //   description: "五月签到 ",
-        //   icon:
-        //     "",
-        //   href: "https://game.weixin.qq.com/cgi-bin/actnew/newportalact/148236/jpvaDJ3eECD7otbMA_WsgA/main_page?act_id=148236&k=jpvaDJ3eECD7otbMA_WsgA&pid=main_page&noticeid=96244134&key=&uin=&abtest_cookie=AAACAA%3D%3D",
-        // },
-        // {
-        //   title: "天龙鉴定礼包",
-        //   description: "天龙鉴定礼包",
-        //   icon:
-        //     "https://img-blog.csdnimg.cn/20210316122159651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
-        // },
-
-        // {
-        //   title: "天龙4周年 庆典召集令",
-        //   description: "天龙4周年 庆典召集令",
-        //   href:
-        //     "https://tlbb.qq.com/act/5607/a20210426qsm/index.html?ADTAG=tgi.wx.share.message",
-        // },
         {
-          title: "心悦APP新人战力等级礼包",
-          description: "心悦APP新人战力等级礼包",
-          href: "https://xinyue.qq.com/act/a20210128xyzf/share.html",
+          title: "应用宝新人等级礼包",
+          description: "应用宝新人等级礼包",
+          icon: "https://img-blog.csdnimg.cn/4d4de7d276084721a4e9c36892f5b168.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAU2hhb3l0c2g=,size_17,color_FFFFFF,t_70,g_se,x_16"
         },
         {
           title: "天龙八部手游圈打卡",
@@ -503,17 +483,6 @@ export default {
           href:
             "https://iwan.qq.com/m/login/login-qt.htm?ru=https%3A%2F%2Fiwan.qq.com%2Fhonour%2Fgrowsign%3FreportParams%3Diwan_activity_rpk%26page_tag%3Dgrowacts%26refer_page%3Dgrowacts%26isDarkMode%3D0%26uiType%3DREGULAR%26ADTAG%3Dtxsp.qdyy.ymfx%26url_from%3Dshare%26second_share%3D0%26share_from%3Dwxf&ADTAG2=txsp.qdyy.ymfx&reportParams=iwan_activity_rpk&page_tag=growacts&refer_page=growsign",
         },
-        // {
-        //   title: "每日签到活动",
-        //   description: "每日领取,新手礼包,签到礼包",
-        //   href: "https://tlbb.qq.com/act/2923/a20200521xiaom/index.html",
-        // },
-        // {
-        //   title: "爱玩链接活动",
-        //   description: "包含每日、每周、新手、半周年庆等多个活动",
-        //   href:
-        //     "https://iwan.qq.com/auto/act.htm?id=1766&from=singlemessage&isappinstalled=0&isShare=true",
-        // },
         {
           title: "公众号每日签到活动",
           description: "每日领取,每日记得签到",
@@ -554,32 +523,32 @@ export default {
           description:
             "新微信可领仅限一次" +
             "\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
-          icon:
-            "https://img-blog.csdnimg.cn/20210206134119880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+          href:
+            "https://tlbb.qq.com/act/6374/a20210804fudai/index.html?packType=0&tokenId=4416370613880X1AEE02013C337639&sOpenId=oVgCowB9YoxJSNZ-b3J-zxO4rISc&sig=3f907b68383b54f458677e56e21fb332",
         },
         {
           title: "新手福袋3",
           description:
             "新微信可领仅限一次" +
             "\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
-          icon:
-            "https://img-blog.csdnimg.cn/20210206134135640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+          href:
+            "https://tlbb.qq.com/act/6374/a20210804fudai/index.html?packType=1&tokenId=101631676472&sOpenId=oVgCowDJP7PcZnYD4qvt6zQz5UKo&sig=019e8132221ad52bcca887546c2932bd",
         },
         {
           title: "新手福袋2",
           description:
             "新微信可领仅限一次" +
             "\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
-          icon:
-            "https://img-blog.csdnimg.cn/20210206134155747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+          href:
+            "https://tlbb.qq.com/act/6374/a20210804fudai/index.html?packType=2&tokenId=4616370430740X1AEE02013C33657E&sOpenId=oVgCowLE809QLjBv8OaG-YSPI7f8&sig=0fc110e48f28757d1ae4537602356af1",
         },
         {
           title: "新手福袋1",
           description:
             "新微信可领仅限一次" +
             "\n新微信可领：150绑元+三级宝石+英雄酒+巴天虎坐骑",
-          icon:
-            "https://img-blog.csdnimg.cn/20210206134211469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNjU2MjQ5NA==,size_16,color_FFFFFF,t_70",
+          href:
+            "https://tlbb.qq.com/act/6374/a20210804fudai/index.html?packType=3&tokenId=816354890660X1AED02013C339082&sOpenId=oVgCowLE809QLjBv8OaG-YSPI7f8&sig=120ab0dffe2c564fffb7c8fb2d33c22c",
         },
         {
           title: "腾讯新闻APP",
@@ -697,7 +666,10 @@ export default {
         "如果长按无法识别，请长按保存图片打开微信扫一扫，并且选择该图片",
     };
   },
-  mounted() {},
+  mounted() {
+
+    this.getData()
+  },
   computed: {
     keepAlive() {
       if (!this.$route.meta.isBack) {
@@ -719,8 +691,16 @@ export default {
       });
     },
   },
-  methods: {},
-};
+  methods: {
+
+    getData(){
+      console.log('getdata');
+      // axios.get('/static/data/data.json').then(res=> {
+      // console.log(res.body)
+      // })
+  },
+}
+}
 </script>
 
 <style scoped>
